@@ -5,23 +5,7 @@ Indexes are needed to make queries faster. For example if you need to find recor
 
 See [MongoDB documentation](http://www.mongodb.org/display/DOCS/Indexes) for details.
 
-## Create indexes with createIndex()
-
-`createIndex` adds a new index to a collection. For checking if the index was already set, use `ensureIndex` instead.
-
-    collection.createIndex(index[, options], callback)
-
-or
-
-    db.createIndex(collectionname, index[, options], callback)
-    
-where
-
-  * `index` is the field or fields to be indexed. See *index field*
-  * `options` are options, for example `{sparse: true}` to include only records that have indexed field set or `{unique: true}` for unique indexes. If the `options` is a boolean value, then it indicates if it's an unique index or not.
-  * `callback` gets two parameters - an error object (if an error occured) and the name for the newly created index
-
-## Ensure indexes with ensureIndex()
+## Create indexes w# Ensure indexes with ensureIndex()
 
 Same as `createIndex` with the difference that the index is checked for existence before adding to avoid duplicate indexes.
 
